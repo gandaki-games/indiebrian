@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taxi Booking System | Bigyan Shrestha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation Header -->
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800">
+    <a href="index.html" class="text-xl font-bold tracking-tight text-indigo-400">Bigyan Shrestha (Brian)</a>
+    <nav class="space-x-6 text-sm text-slate-400">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="projects.html" class="text-white font-medium">Projects</a>
+      <a href="skills.html" class="hover:text-white transition">Skills</a>
+      <a href="contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl w-full mx-auto px-6 py-12 flex-grow">
+    <a href="projects.html" class="text-sm text-indigo-400 hover:text-indigo-300 mb-6 inline-block">&larr; Back to Projects</a>
+    
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+      <h1 class="text-3xl font-bold text-white">Taxi Booking System</h1>
+      <div class="flex gap-2">
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Python</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Tkinter GUI</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">MySQL / phpMyAdmin</span>
+      </div>
+    </div>
+
+    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+      A desktop management solution engineered in Python using Tkinter and connected to a MySQL database via phpMyAdmin[cite: 1]. The system automates ride scheduling, driver assignments, and trip tracking through role-based access control[cite: 1].
+    </p>
+
+    <!-- System Architecture & Role Breakdown -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-800 pb-2">Role-Based Access & Architecture</h2>
+      <div class="grid md:grid-cols-3 gap-4 text-slate-300">
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">Customer Interface</h3>
+          <p class="text-sm leading-relaxed">
+            Allows users to input pickup/drop-off locations, schedule dates/times, view trip cost estimates, and manage booking requests (create, update, cancel)[cite: 1].
+          </p>
+        </div>
+
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">Driver Interface</h3>
+          <p class="text-sm leading-relaxed">
+            Enables drivers to mark availability status, view assigned trip queues, update ride statuses (In-Progress, Completed), and review earnings history.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">Admin Dashboard</h3>
+          <p class="text-sm leading-relaxed">
+            Provides complete CRUD administrative oversight across all users, manually overrides driver assignments, and accesses system logs[cite: 1].
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Business & Technical Logic -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-800 pb-2">Core Logic Specifications</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Trip Allocation & Status Lifecycle</h3>
+          <div class="bg-slate-950 p-4 rounded-lg font-mono text-xs text-slate-300 overflow-x-auto border border-slate-800">
+            [Customer Request] &rarr; Status: "PENDING" <br/>
+            &nbsp;&nbsp;&rarr; [Driver Availability Check: `driver_status == 'AVAILABLE'`] <br/>
+            &nbsp;&nbsp;&rarr; [System/Admin Assignment] &rarr; Status: "ASSIGNED" <br/>
+            &nbsp;&nbsp;&rarr; [Trip Start] &rarr; Status: "IN_PROGRESS" <br/>
+            &nbsp;&nbsp;&rarr; [Trip Completion] &rarr; Status: "COMPLETED" & Driver Status: "AVAILABLE"
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Database Relations & Data Integrity</h3>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400 text-sm">
+            <li><strong>Relational Schema:</strong> Built on relational tables (`Users`, `Drivers`, `Bookings`, `Payments`) managed in phpMyAdmin[cite: 1].</li>
+            <li><strong>Foreign Key Constraints:</strong> Links each booking record directly to a valid `Customer_ID` and assigned `Driver_ID`.</li>
+            <li><strong>Conflict Avoidance Logic:</strong> Queries driver assignment state before committing booking updates to prevent double-booking active drivers.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <div class="pt-4 border-t border-slate-800 flex gap-4">
+      <a href="https://github.com" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition">View Python Code on GitHub</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800 flex justify-between items-center text-sm text-slate-500">
+    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+    <p>Guildford, UK</p>
+  </footer>
+
+</body>
+</html>

@@ -6,137 +6,88 @@
   <title>Bigyan Shrestha | Software Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
   <!-- Header / Navigation -->
-  <header class="max-w-5xl mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800">
-    <h1 class="text-xl font-bold tracking-tight text-indigo-400">Bigyan Shrestha (Brian)</h1>
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800">
+    <a href="index.html" class="text-xl font-bold tracking-tight text-indigo-400">Bigyan Shrestha (Brian)</a>
     <nav class="space-x-6 text-sm text-slate-400">
-      <a href="#about" class="hover:text-white transition">About</a>
-      <a href="#skills" class="hover:text-white transition">Skills</a>
-      <a href="#projects" class="hover:text-white transition">Projects</a>
-      <a href="#contact" class="hover:text-white transition">Contact</a>
+      <a href="index.html" class="text-white font-medium">Home</a>
+      <a href="projects.html" class="hover:text-white transition">Projects</a>
+      <a href="skills.html" class="hover:text-white transition">Skills</a>
+      <a href="contact.html" class="hover:text-white transition">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="about" class="max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+  <main class="max-w-5xl w-full mx-auto px-6 py-16 flex-grow">
+    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
       Software Developer & Game Enthusiast
-    </h2>
-    <p class="text-lg text-slate-400 max-w-2xl mb-6 leading-relaxed">
+    </h1>
+    <p class="text-lg text-slate-400 max-w-2xl mb-8 leading-relaxed">
       Passionate about creating engaging software solutions, interactive application UI, and game mechanics. Driven by the belief that compelling storytelling and intuitive design can create meaningful human experiences.
     </p>
-    <div class="flex gap-4">
-      <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition">View Work</a>
-      <a href="https://github.com" target="_blank" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-5 py-2.5 rounded-lg transition">GitHub</a>
-      <a href="https://linkedin.com" target="_blank" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-5 py-2.5 rounded-lg transition">LinkedIn</a>
+    <div class="flex flex-wrap gap-4 mb-16">
+      <a href="projects.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition">Explore Projects</a>
+      <a href="skills.html" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-5 py-2.5 rounded-lg transition">Technical Skills</a>
+      <a href="contact.html" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-5 py-2.5 rounded-lg transition">Contact Me</a>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-800">
-    <h3 class="text-2xl font-bold mb-6 text-white">Technical Skills</h3>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-800">
-        <h4 class="font-semibold text-indigo-400 mb-2">Languages</h4>
-        <p class="text-sm text-slate-300">Dart, Python, Java, C#</p>
-      </div>
-      <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-800">
-        <h4 class="font-semibold text-indigo-400 mb-2">Frameworks</h4>
-        <p class="text-sm text-slate-300">Flutter, Mobile UI, Desktop UI</p>
-      </div>
-      <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-800">
-        <h4 class="font-semibold text-indigo-400 mb-2">Databases</h4>
-        <p class="text-sm text-slate-300">Oracle APEX, SQL</p>
-      </div>
-      <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-800">
-        <h4 class="font-semibold text-indigo-400 mb-2">Core Concepts</h4>
-        <p class="text-sm text-slate-300">System Simulation, Payment Integration, OOP</p>
-      </div>
-    </div>
-  </section>
+    <!-- Featured Projects Preview with Local Images -->
+    <section>
+      <h2 class="text-2xl font-bold text-white mb-6">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
 
-  <!-- Projects Showcase Section -->
-  <section id="projects" class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-800">
-    <h3 class="text-2xl font-bold mb-8 text-white">Featured Projects</h3>
-    
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <!-- Project 1 -->
-      <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between p-6 hover:border-slate-700 transition">
-        <div>
-          <div class="flex justify-between items-center mb-3">
+        <!-- Project 1 -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
+          <img src="images/game-platform.png" alt="Game Distribution Platform Preview" class="w-full h-48 object-cover border-b border-slate-800" />
+          <div class="p-6">
             <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Flutter / Dart</span>
-            <span class="text-xs text-slate-500">Jan 2023</span>
+            <h3 class="text-xl font-bold text-white mt-3 mb-2">Game Distribution Platform</h3>
+            <p class="text-slate-400 text-sm mb-4">Digital storefront prototype featuring mobile payment gateways and OTP verification.</p>
+            <a href="project-game-platform.html" class="text-indigo-400 font-medium hover:text-indigo-300 text-sm">View Project Details &rarr;</a>
           </div>
-          <h4 class="text-xl font-bold text-white mb-2">Game Distribution Platform</h4>
-          <p class="text-slate-400 text-sm mb-4">
-            Prototype digital storefront designed for Nepali users to browse, download, and purchase games with a Khalti payment interface and OTP verification.
-          </p>
         </div>
-        <div class="flex gap-3 text-sm font-medium">
-          <a href="#" class="text-indigo-400 hover:text-indigo-300">Live Demo &rarr;</a>
-          <a href="#" class="text-slate-400 hover:text-white">Source Code &rarr;</a>
-        </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between p-6 hover:border-slate-700 transition">
-        <div>
-          <div class="flex justify-between items-center mb-3">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Python</span>
-            <span class="text-xs text-slate-500">Jan 2022</span>
+        <!-- Project 2 -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
+          <img src="images/taxi-system.png" alt="Taxi Booking System Preview" class="w-full h-48 object-cover border-b border-slate-800" />
+          <div class="p-6">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Python / MySQL</span>
+            <h3 class="text-xl font-bold text-white mt-3 mb-2">Taxi Booking System</h3>
+            <p class="text-slate-400 text-sm mb-4">Desktop trip management application supporting Customer, Driver, and Admin roles[cite: 1].</p>
+            <a href="project-taxi-system.html" class="text-indigo-400 font-medium hover:text-indigo-300 text-sm">View Project Details &rarr;</a>
           </div>
-          <h4 class="text-xl font-bold text-white mb-2">Taxi Booking System</h4>
-          <p class="text-slate-400 text-sm mb-4">
-            Desktop app exploring three perspectives (customer, admin, driver) with trip management, taxi allocation, and account registration.
-          </p>
         </div>
-        <div class="flex gap-3 text-sm font-medium">
-          <a href="#" class="text-slate-400 hover:text-white">Source Code &rarr;</a>
-        </div>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between p-6 hover:border-slate-700 transition">
-        <div>
-          <div class="flex justify-between items-center mb-3">
+        <!-- Project 3 -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
+          <img src="images/elevator-system.png" alt="Elevator Control System Preview" class="w-full h-48 object-cover border-b border-slate-800" />
+          <div class="p-6">
             <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">C#</span>
-            <span class="text-xs text-slate-500">Nov 2022</span>
+            <h3 class="text-xl font-bold text-white mt-3 mb-2">Elevator Control System</h3>
+            <p class="text-slate-400 text-sm mb-4">Real-time control simulation with activity logging and multi-floor dispatch mechanics.</p>
+            <a href="project-elevator-system.html" class="text-indigo-400 font-medium hover:text-indigo-300 text-sm">View Project Details &rarr;</a>
           </div>
-          <h4 class="text-xl font-bold text-white mb-2">Elevator Control System</h4>
-          <p class="text-slate-400 text-sm mb-4">
-            System simulation featuring floor selection, door controls, movement mechanics, and real-time activity logging with time-stamps.
-          </p>
         </div>
-        <div class="flex gap-3 text-sm font-medium">
-          <a href="#" class="text-slate-400 hover:text-white">Source Code &rarr;</a>
-        </div>
-      </div>
 
-      <!-- Project 4 -->
-      <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between p-6 hover:border-slate-700 transition">
-        <div>
-          <div class="flex justify-between items-center mb-3">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Java</span>
-            <span class="text-xs text-slate-500">Sep 2021</span>
+        <!-- Project 4 -->
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
+          <img src="images/hotel-system.png" alt="Hotel Management System Preview" class="w-full h-48 object-cover border-b border-slate-800" />
+          <div class="p-6">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Java / Swing / MySQL</span>
+            <h3 class="text-xl font-bold text-white mt-3 mb-2">Hotel Booking System</h3>
+            <p class="text-slate-400 text-sm mb-4">Desktop management suite for handling check-ins, room service orders, and billing calculations[cite: 2].</p>
+            <a href="project-hotel-system.html" class="text-indigo-400 font-medium hover:text-indigo-300 text-sm">View Project Details &rarr;</a>
           </div>
-          <h4 class="text-xl font-bold text-white mb-2">Hotel Booking System</h4>
-          <p class="text-slate-400 text-sm mb-4">
-            Digital hotel reception desk desktop app integrating reservations, room services, guest check-in/checkout, and billing management.
-          </p>
         </div>
-        <div class="flex gap-3 text-sm font-medium">
-          <a href="#" class="text-slate-400 hover:text-white">Source Code &rarr;</a>
-        </div>
-      </div>
 
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer id="contact" class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800 flex justify-between items-center text-sm text-slate-500">
     <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
     <p>Guildford, UK</p>
   </footer>

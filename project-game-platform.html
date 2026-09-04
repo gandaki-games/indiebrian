@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Distribution Platform | Bigyan Shrestha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation Header -->
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800">
+    <a href="index.html" class="text-xl font-bold tracking-tight text-indigo-400">Bigyan Shrestha (Brian)</a>
+    <nav class="space-x-6 text-sm text-slate-400">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="projects.html" class="text-white font-medium">Projects</a>
+      <a href="skills.html" class="hover:text-white transition">Skills</a>
+      <a href="contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl w-full mx-auto px-6 py-12 flex-grow">
+    <a href="projects.html" class="text-sm text-indigo-400 hover:text-indigo-300 mb-6 inline-block">&larr; Back to Projects</a>
+    
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+      <h1 class="text-3xl font-bold text-white">Game Distribution Platform</h1>
+      <div class="flex gap-2">
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Flutter</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Dart</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Khalti API</span>
+      </div>
+    </div>
+
+    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+      A mobile storefront prototype built to streamline game discovery, purchasing, and downloading for gamers in Nepal. The application integrates secure local payment gateways, two-factor mobile authentication, and personalized library synchronization.
+    </p>
+
+    <!-- System Architecture & Workflow -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-800 pb-2">System Architecture & Workflow</h2>
+      <div class="space-y-6 text-slate-300">
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">1. Client-Side Presentation (Flutter & Dart)</h3>
+          <p class="text-sm leading-relaxed">
+            The frontend uses cross-platform reactive state management to maintain synchronous UI updates across the game store, search filters, wishlist, and library views.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">2. Authentication & Verification Subsystem</h3>
+          <p class="text-sm leading-relaxed">
+            User identity is secured using phone-number verification via One-Time Passwords (OTP). Upon submitting a mobile number, the client initiates a request to the backend service to dispatch an SMS payload containing a cryptographically generated token.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">3. Payment Gateway Integration (Khalti SDK/API)</h3>
+          <p class="text-sm leading-relaxed">
+            Transaction flows are handled through a Khalti wallet integration designed for local currency operations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Business & Technical Logic -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-800 pb-2">Core Logic Specifications</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Authentication & Phone OTP Validation</h3>
+          <p class="text-slate-300 text-sm mb-3">
+            The login flow relies on time-sensitive OTP verification to ensure verified user credentials before facilitating monetary transactions:
+          </p>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400 text-sm">
+            <li>User submits their local mobile phone number.</li>
+            <li>System generates a 6-digit numeric token with a 300-second expiration lifecycle.</li>
+            <li>User inputs the received OTP; upon verification, a JWT user session token is generated and stored in secure encrypted client storage.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Khalti Transaction Handling Sequence</h3>
+          <div class="bg-slate-950 p-4 rounded-lg font-mono text-xs text-slate-300 overflow-x-auto border border-slate-800">
+            [User Checkout] &rarr; [Initiate Khalti Payment Intent] <br/>
+            &nbsp;&nbsp;&rarr; [Verify Khalti PIN & OTP on Gateway] <br/>
+            &nbsp;&nbsp;&rarr; [Receive Payment Token from Khalti Server] <br/>
+            &nbsp;&nbsp;&rarr; [Backend Verification API Call (`/api/v2/payment/verify/`)] <br/>
+            &nbsp;&nbsp;&rarr; [Database State Update: Update User Library & Add Order Record] <br/>
+            &nbsp;&nbsp;&rarr; [Trigger Game Asset Download Authorization]
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Digital Rights & Download Management</h3>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400 text-sm">
+            <li><strong>Entitlement Checking:</strong> Before granting access to binary download files, the backend queries the database for an active ownership record associated with the user ID.</li>
+            <li><strong>Secure Tokenized Downloads:</strong> Once ownership is validated, the server responds with a temporary, signed download URL preventing direct unauthorized link sharing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <div class="pt-4 border-t border-slate-800 flex gap-4">
+      <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition">View Live Demo</a>
+      <a href="#" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-5 py-2.5 rounded-lg transition">View Source Code</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800 flex justify-between items-center text-sm text-slate-500">
+    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+    <p>Guildford, UK</p>
+  </footer>
+
+</body>
+</html>

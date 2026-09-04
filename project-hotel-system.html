@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Management System | Bigyan Shrestha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation Header -->
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800">
+    <a href="index.html" class="text-xl font-bold tracking-tight text-indigo-400">Bigyan Shrestha (Brian)</a>
+    <nav class="space-x-6 text-sm text-slate-400">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="projects.html" class="text-white font-medium">Projects</a>
+      <a href="skills.html" class="hover:text-white transition">Skills</a>
+      <a href="contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl w-full mx-auto px-6 py-12 flex-grow">
+    <a href="projects.html" class="text-sm text-indigo-400 hover:text-indigo-300 mb-6 inline-block">&larr; Back to Projects</a>
+    
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+      <h1 class="text-3xl font-bold text-white">Hotel Management System</h1>
+      <div class="flex gap-2">
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Java</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Java Swing</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">MySQL / JDBC</span>
+      </div>
+    </div>
+
+    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+      A multi-tier desktop application built with Java Swing and JDBC to handle hospitality workflows[cite: 2]. The system streamlines reception operations, room bookings, check-in/checkout processing, room service tracking, and automated billing[cite: 2].
+    </p>
+
+    <!-- Workflow Modules -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-800 pb-2">System Modules & Operations</h2>
+      <div class="space-y-6 text-slate-300">
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">1. Room Availability & Reservation Engine</h3>
+          <p class="text-sm leading-relaxed">
+            Receptionists can filter available rooms by category (Single, Double, Suite) and date ranges. The system validates availability before writing dynamic reservation records to the MySQL database[cite: 2].
+          </p>
+        </div>
+
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">2. Check-In / Check-Out Processing</h3>
+          <p class="text-sm leading-relaxed">
+            Automates state transitions for rooms (`Vacant`, `Occupied`, `Cleaning`). Processing a check-out locks room service additions and calculates stay durations[cite: 2].
+          </p>
+        </div>
+
+        <div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">3. Room Service & Add-On Billing</h3>
+          <p class="text-sm leading-relaxed">
+            Links food, beverage, and cleaning orders directly to active room sessions, dynamically accumulating charges into the customer's master tab[cite: 2].
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Business & Technical Logic -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-800 pb-2">Core Logic Specifications</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Automated Billing Algorithm</h3>
+          <p class="text-slate-300 text-sm mb-3">
+            The checkout module calculates total costs using standard night-rate formulas combined with active service charges:
+          </p>
+          <div class="bg-slate-950 p-4 rounded-lg font-mono text-xs text-indigo-300 overflow-x-auto border border-slate-800">
+            Total Bill = (Stay Duration in Nights &times; Base Room Rate) + &sum;(Room Service Orders) + Taxes/Fees
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-2">Database Architecture & Persistence</h3>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400 text-sm">
+            <li><strong>JDBC Connection Management:</strong> Employs structured PreparedStatements to execute secure parameterised queries and protect against SQL injection.</li>
+            <li><strong>Transaction Atomicity:</strong> Uses MySQL transactions during checkout to update room availability state and mark invoice payments simultaneously.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <div class="pt-4 border-t border-slate-800 flex gap-4">
+      <a href="https://github.com" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition">View Java Code on GitHub</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800 flex justify-between items-center text-sm text-slate-500">
+    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+    <p>Guildford, UK</p>
+  </footer>
+
+</body>
+</html>
