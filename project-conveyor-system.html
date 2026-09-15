@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conveyor & Pick-to-Light System | Bigyan Shrestha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800/80">
+    <a href="index.html" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      Bigyan Shrestha <span class="text-xs text-slate-500 font-normal ml-1">(Brian)</span>
+    </a>
+    <nav class="text-sm">
+      <a href="index.html" class="text-slate-400 hover:text-white transition font-medium">Home</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl w-full mx-auto px-6 py-12 flex-grow">
+    
+    <a href="projects.html" class="inline-flex items-center text-sm text-indigo-400 hover:text-indigo-300 font-medium mb-6 transition">
+      &larr; Back to Projects
+    </a>
+
+    <div class="mb-8">
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">C# / .NET Core</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">SignalR</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">Docker</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+        Conveyor & Pick-to-Light System
+      </h1>
+      <p class="text-slate-400 text-lg max-w-3xl leading-relaxed">
+        A warehouse automation simulation platform engineered to replicate physical tote routing, PLC sensor integration, and real-time operator guidance.
+      </p>
+    </div>
+
+    <!-- Image Preview -->
+    <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden mb-12">
+      <img src="images/conveyor-system.png" alt="Conveyor Automation System" class="w-full h-auto object-cover max-h-[450px]" />
+    </div>
+
+    <!-- Main Content & Sidebar Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Detailed Narrative -->
+      <div class="md:col-span-2 space-y-8 text-slate-300 leading-relaxed">
+        
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight mb-3">Project Overview</h2>
+          <p>
+            This system simulates high-speed order fulfillment workflows found in modern distribution centers. It bridges software control systems with physical conveyor hardware logic, managing item movement, diverting totes to specific picking zones, and driving pick-to-light displays for human operators.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight mb-3">Core Functionality & Architecture</h2>
+          <ul class="space-y-3 text-slate-400">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-400 font-bold">&bull;</span>
+              <span><strong class="text-slate-200">PLC & Sensor Abstraction:</strong> Simulates photoelectric sensors, barcode scanners, and pneumatic diverter switches asynchronously to maintain realistic timing constraints.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-400 font-bold">&bull;</span>
+              <span><strong class="text-slate-200">Real-Time Telemetry:</strong> Leverages SignalR WebSockets to stream live tote location tracking, line speed measurements, and error state indicators to administrative web dashboards.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-400 font-bold">&bull;</span>
+              <span><strong class="text-slate-200">Pick-to-Light Guidance:</strong> Coordinates visual LED cues and quantity displays at operator workstations, drastically reducing pick errors during order fulfillment.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-400 font-bold">&bull;</span>
+              <span><strong class="text-slate-200">Containerized Deployment:</strong> Built and containerized using Docker to enable cross-platform execution and standardized local integration testing.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight mb-3">Key Engineering Challenges</h2>
+          <p class="text-slate-400">
+            Managing accurate event synchronization across rapid conveyor state transitions was a primary challenge. By implementing thread-safe queue handling and event-driven state machines, the application prevents race conditions when tracking multiple totes simultaneously.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Tech Specs Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 space-y-4">
+          <h3 class="text-lg font-bold text-white border-b border-slate-800 pb-2">Technical Stack</h3>
+          <div>
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold block mb-2">Backend & Logic</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">C#</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">.NET Core</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">Async/Await</span>
+            </div>
+          </div>
+          <div>
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold block mb-2">Networking & Real-Time</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">SignalR WebSockets</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">REST APIs</span>
+            </div>
+          </div>
+          <div>
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold block mb-2">DevOps & Database</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">Docker</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs border border-slate-700">MySQL / SQL Server</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Source Code</h3>
+          <p class="text-slate-400 text-sm mb-4">Explore the project architecture and simulation modules on GitHub.</p>
+          <a href="https://github.com/gandaki-games/ConveyorAutomation" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-2.5 rounded-xl shadow-lg shadow-indigo-600/20 transition">
+            View Repository &rarr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800/80 flex justify-between items-center text-sm text-slate-500">
+    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+    <p class="flex items-center gap-1.5">
+      <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Guildford, UK
+    </p>
+  </footer>
+
+</body>
+</html>

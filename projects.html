@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Bigyan Shrestha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header / Navigation -->
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800/80">
+    <a href="index.html" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      Bigyan Shrestha <span class="text-xs text-slate-500 font-normal ml-1">(Brian)</span>
+    </a>
+    <nav class="space-x-6 text-sm text-slate-400">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <main class="max-w-5xl w-full mx-auto px-6 py-16 flex-grow">
+    
+    <!-- Section Header -->
+    <div class="mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-medium mb-4">
+        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+        Portfolio Showcase
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-white mb-4">
+        Featured <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Projects</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+        A comprehensive look at the software solutions, automation engines, and application prototypes I've engineered.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Project 1: Game Distribution Platform -->
+      <div class="group bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between">
+        <div class="overflow-hidden border-b border-slate-800/80">
+          <img src="images/game-platform.png" alt="Game Distribution Platform Preview" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">Flutter / Dart</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2 group-hover:text-indigo-300 transition">Game Distribution Platform</h3>
+          <p class="text-slate-400 text-sm mb-4">Digital storefront prototype featuring mobile payment gateways and OTP verification.</p>
+          <a href="project-game-platform.html" class="inline-flex items-center text-indigo-400 font-medium hover:text-indigo-300 text-sm">
+            View Details <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: Taxi Booking System -->
+      <div class="group bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between">
+        <div class="overflow-hidden border-b border-slate-800/80">
+          <img src="images/taxi-system.png" alt="Taxi Booking System Preview" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">Python / MySQL</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2 group-hover:text-indigo-300 transition">Taxi Booking System</h3>
+          <p class="text-slate-400 text-sm mb-4">Desktop trip management application supporting Customer, Driver, and Admin roles.</p>
+          <a href="project-taxi-system.html" class="inline-flex items-center text-indigo-400 font-medium hover:text-indigo-300 text-sm">
+            View Details <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: Conveyor Automation System -->
+      <div class="group bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between">
+        <div class="overflow-hidden border-b border-slate-800/80">
+          <img src="images/conveyor-system.png" alt="Conveyor Automation System Preview" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">C# / .NET Core / SignalR</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2 group-hover:text-indigo-300 transition">Conveyor & Pick-to-Light System</h3>
+          <p class="text-slate-400 text-sm mb-4">Simulated warehouse automation platform featuring PLC abstraction, live SignalR updates, and Docker containerization.</p>
+          <a href="project-conveyor-system.html" class="inline-flex items-center text-indigo-400 font-medium hover:text-indigo-300 text-sm">
+            View Details <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 4: Hotel Booking System -->
+      <div class="group bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between">
+        <div class="overflow-hidden border-b border-slate-800/80">
+          <img src="images/hotel-system.png" alt="Hotel Management System Preview" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">Java / Swing / MySQL</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2 group-hover:text-indigo-300 transition">Hotel Booking System</h3>
+          <p class="text-slate-400 text-sm mb-4">Desktop management suite for handling check-ins, room service orders, and billing calculations.</p>
+          <a href="project-hotel-system.html" class="inline-flex items-center text-indigo-400 font-medium hover:text-indigo-300 text-sm">
+            View Details <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800/80 flex justify-between items-center text-sm text-slate-500">
+    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+    <p class="flex items-center gap-1.5">
+      <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Guildford, UK
+    </p>
+  </footer>
+
+</body>
+</html>

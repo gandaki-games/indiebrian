@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shootpunk | Bigyan Shrestha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800/80">
+    <a href="index.html" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      Bigyan Shrestha <span class="text-xs text-slate-500 font-normal ml-1">(Brian)</span>
+    </a>
+    <nav class="text-sm">
+      <a href="index.html" class="text-slate-400 hover:text-white transition font-medium">Home</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl w-full mx-auto px-6 py-12 flex-grow">
+    
+    <a href="projects.html" class="inline-flex items-center text-sm text-indigo-400 hover:text-indigo-300 font-medium mb-6 transition">
+      &larr; Back to Projects
+    </a>
+
+    <div class="mb-8">
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">Game Design</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800/60">Survival Roguelike</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Windows Build</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+        Shootpunk
+      </h1>
+      <p class="text-slate-400 text-lg max-w-3xl leading-relaxed">
+        A fast-paced aerial survival roguelike featuring automated target firing, manual missile evasion, and modular ship upgrade progression.
+      </p>
+    </div>
+
+    <!-- Video Preview Container -->
+    <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden mb-12 shadow-2xl">
+      <video controls autoplay loop muted class="w-full h-auto max-h-[500px] object-cover">
+        <source src="videos/shootpunk-gameplay.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Main Content & Sidebar Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Detailed Narrative -->
+      <div class="md:col-span-2 space-y-8 text-slate-300 leading-relaxed">
+        
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight mb-3">Gameplay Core Loop</h2>
+          <p class="text-slate-400">
+            Players pilot a custom ship through increasing enemy waves. While primary weapons target incoming threats automatically, players must manually deploy limited flare charges to dodge tracking missiles, collect dropped salvage parts, and continuously upgrade performance during each run.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight mb-4 border-b border-slate-800/80 pb-2">7-Day Sprint Roadmap</h2>
+          <div class="space-y-4">
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+              <h3 class="text-base font-bold text-indigo-400 mb-1">Day 1: Core Loop Lock</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Player movement, auto-shooting, enemy spawning, salvage drops, and shop screen state loops.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+              <h3 class="text-base font-bold text-indigo-400 mb-1">Day 2: Enemy Roster</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Implemented 4 distinct roles: Basic Fighter, Fast Interceptor, Heavy Shooter, and Missile Fighter.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+              <h3 class="text-base font-bold text-indigo-400 mb-1">Day 3: Progression & Parts</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Scaling upgrade costs across Core and Combat parts (Speed, Armor, Health, Fire Rate, Flares).</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+              <h3 class="text-base font-bold text-indigo-400 mb-1">Day 4: Signature Missile System</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Visual missile proximity warnings paired with manual flare cooldown mechanics.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+              <h3 class="text-base font-bold text-indigo-400 mb-1">Day 5: Difficulty Progression</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Time-based wave scaling and end-of-run survival summary statistics.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+              <h3 class="text-base font-bold text-indigo-400 mb-1">Day 6 & 7: VFX Polish & Windows Build</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Explosion animations, hit audio feedback, UI balancing, bug fixes, and standalone executable generation.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Specs Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 space-y-4">
+          <h3 class="text-lg font-bold text-white border-b border-slate-800/80 pb-2">Technical Overview</h3>
+          <div>
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold block mb-2">Key Mechanics</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-slate-800/80 text-slate-300 rounded-lg text-xs border border-slate-700/60 font-medium">Auto-Shooting</span>
+              <span class="px-2.5 py-1 bg-slate-800/80 text-slate-300 rounded-lg text-xs border border-slate-700/60 font-medium">Manual Flares</span>
+              <span class="px-2.5 py-1 bg-slate-800/80 text-slate-300 rounded-lg text-xs border border-slate-700/60 font-medium">Wave Spawner</span>
+            </div>
+          </div>
+          <div>
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold block mb-2">Platform</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-slate-800/80 text-slate-300 rounded-lg text-xs border border-slate-700/60 font-medium">Windows Standalone</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Download & Code</h3>
+          <p class="text-slate-400 text-sm mb-4">Check out the Windows executable build or view the project repository.</p>
+          <a href="#" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-2.5 rounded-xl shadow-lg shadow-indigo-600/20 transition mb-3">
+            Download Playable Build &rarr;
+          </a>
+          
+            Source Code yet to be completed.
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl w-full mx-auto px-6 py-8 border-t border-slate-800/80 flex justify-between items-center text-sm text-slate-500">
+    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+    <p class="flex items-center gap-1.5">
+      <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Guildford, UK
+    </p>
+  </footer>
+
+</body>
+</html>
